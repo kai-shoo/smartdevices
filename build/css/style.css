@@ -296,3 +296,23 @@ a {
 
 .features__item:hover p {
   color: #ffffff; }
+
+.about {
+  width: 100%;
+  color: #666666;
+  background-image: url("../img/about-year.png");
+  background-repeat: no-repeat; }
+
+.about__container {
+  padding: 0 180px; }
+
+.about h2 {
+  margin: 0 0 18px 0;
+  font-family: "Roboto Condensed", Georgia, serif;
+  font-size: 36px;
+  line-height: 51px; }
+
+.about p {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  line-height: 22px; }
