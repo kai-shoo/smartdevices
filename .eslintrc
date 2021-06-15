@@ -1,0 +1,10 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 9,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true
+  },
+  "extends": "htmlacademy/es6",
+}

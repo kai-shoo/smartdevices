@@ -1,0 +1,89 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+
+  font-family: $font-family;
+  font-size: 20px;
+  color: black;
+
+  &--block {
+    overflow: hidden;
+  }
+}
+
+.page__header {
+  flex: 0 0 auto;
+}
+
+.page__main {
+  flex: 1 0 auto;
+}
+
+.page__footer {
+  flex: 0 0 auto;
+  padding-bottom: 100px;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 50px;
+  }
+}
+
+.page__hero {
+  margin-bottom: 150px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 70px;
+  }
+}
+
+.page__about {
+  margin-bottom: 110px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 70px;
+  }
+}
+
+.page__types {
+  padding-top: 150px;
+  padding-bottom: 130px;
+
+  @media (max-width: $tablet) {
+    padding-top: 47px;
+    padding-bottom: 1px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-bottom: 42px;
+  }
+}
+
+.page__video {
+  margin-bottom: 250px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 155px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 119px;
+  }
+}
+
+.page__address {
+  margin-bottom: 35px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
+}
