@@ -65,7 +65,7 @@
             </svg>
           </div>
           <h3>Оперативные сроки</h3>
-          <p class="features__text">
+          <p>
             Усовершенствованная логистическая система позволяет нам просчитывать
             стоимость, производить и доставлять заказы плат и комплектующих в
             самые короткие сроки
@@ -78,7 +78,7 @@
             </svg>
           </div>
           <h3>Крупные поставщики</h3>
-          <p class="features__text">
+          <p>
             Нашими поставщиками являются такие крупные мировые компании как:
             OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими
             компаниями обеспичивает хорошее качество нашей продукции.
@@ -91,9 +91,7 @@
             </svg>
           </div>
           <h3>Полная конфиденциальность</h3>
-          <p class="features__text">
-            По желанию клиента мы обеспечиваем полную конфеденциальность.
-          </p>
+          <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
         </div>
         <div class="features__item">
           <div class="features__icon">
@@ -102,14 +100,14 @@
             </svg>
           </div>
           <h3>Персонализация стоимости</h3>
-          <p class="features__text">
+          <p>
             Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы
             установить ту цену, которая Вас устраивает.
           </p>
         </div>
       </section>
-      <section class="page__about about container">
-        <div class="about__container">
+      <section class="page__about about">
+        <div class="about__container container">
           <h2>О компании</h2>
           <p>
             Мы поставляем электронные комплектующие, производим печатные платы и
@@ -122,6 +120,56 @@
             Производители светотехники России.
           </p>
           <a class="about__button button" href="#">Подробнее</a>
+        </div>
+      </section>
+      <section class="page__services services">
+        <div class="services__container container">
+          <h2>Service Device предлагает следующие товары и услуги</h2>
+          <ul class="services__list">
+            <li class="services__item">
+              <a class="services__link" href="#">
+                <p>Производство<br>печатных плат</p>
+              </a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#">
+                <p>Монтаж печатных<br>плат</p>
+              </a>
+            </li>
+            <li class="services__item">
+              <a class="services__link" href="#">
+                <p>Комплектующие<br>для светотехники</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="page__form form">
+        <div class="form__container container">
+          <h2>Остались вопросы? Задайте их нам!</h2>
+          <p>Мы проконсультируем Вас бесплатно</p>
+          <form class="form__wrapper" action="post">
+            <label class="form__input-wrapper">
+              <span class="visually-hidden">Имя</span>
+              <input type="text" name="name" id="name" placeholder="Имя">
+            </label>
+            <label class="form__input-wrapper">
+              <span class="visually-hidden">Имя</span>
+              <input type="text" name="phone" id="phone" placeholder="Телефон">
+            </label>
+            <label class="form__input-wrapper form__input-wrapper--textarea">
+              <span class="visually-hidden">Имя</span>
+              <textarea name="question" id="question" placeholder="Ваш вопрос">
+            </textarea></label>
+            <button class="button form__button" type="submit">
+              Задать вопрос
+            </button>
+            <label class="form__input-wrapper form__input-wrapper--checkbox">
+              <input class="visually-hidden" type="checkbox" name="personalData" id="personalData">
+              <span class="form__input-checkbox"></span>
+              <span class="form__label">Я согласен на обработку персональных данных</span>
+            </label>
+          </form>
         </div>
       </section>
     </main>
