@@ -301,9 +301,20 @@ a {
   width: 100%;
   color: #666666;
   background-image: url("../img/about-year.png");
+  background-size: contain;
   background-repeat: no-repeat; }
 
 .about__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 0 180px; }
 
 .about h2 {
@@ -316,3 +327,8 @@ a {
   margin: 0 0 10px 0;
   font-size: 16px;
   line-height: 22px; }
+
+.about__button {
+  min-width: 180px;
+  color: #00b2ff;
+  border-color: #00b2ff; }
