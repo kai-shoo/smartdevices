@@ -1,0 +1,19 @@
+.social {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.sosicla__logo {
+  flex-basis: 100%;
+
+  @media (max-width: $tablet) {
+    order: 1;
+  }
+}
+
+.social__list {
+  @media (max-width: $tablet) {
+    order: 3;
+  }
+}
