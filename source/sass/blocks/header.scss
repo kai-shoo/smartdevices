@@ -11,9 +11,9 @@
   align-items: center;
   justify-content: flex-start;
   row-gap: 16px;
-  min-height: 52px + 2 * 33px;
-  padding-top: 33px;
-  padding-bottom: 33px;
+  min-height: 52px + 2 * 31px;
+  padding-top: 31px;
+  padding-bottom: 31px;
 
   line-height: 18px;
   color: $white;
@@ -27,11 +27,13 @@
   color: inherit;
   vertical-align: middle;
 
-  &:not(:last-child) {
-    margin-right: 88px;
-  }
+  margin-right: 88px;
 
   &:last-child {
+    margin-right: 50px;
+  }
+
+  &:nth-last-child(2) {
     margin-right: 50px;
   }
 
@@ -44,9 +46,13 @@
 }
 
 .header__link-icon {
-  margin-right: 16px;
+  margin-right: 4px;
 
   vertical-align: middle;
+
+  &--mail {
+    margin-right: 7px;
+  }
 
   @media (max-width: $tablet) {
     margin-right: 0;
@@ -61,7 +67,7 @@
 
 .header__request {
   min-width: 180px;
-
+  min-height: 45px;
   @media (max-width: $tablet) {
     display: none;
   }

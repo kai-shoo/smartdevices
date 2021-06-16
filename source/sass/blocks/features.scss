@@ -2,8 +2,10 @@
   display: grid;
   gap: 30px;
   grid-template-columns: repeat(2, minmax(345px, 1fr));
-  grid-template-rows: repeat(auto-fill, 300px);
-
+  grid-auto-rows: 300px;
+  padding: 112px 0 0 15px;
+  max-width: 1170px + 15px;
+  width: 100%;
   color: $features-color;
 
   @media (max-width: $mobile) {
@@ -12,10 +14,12 @@
 }
 
 .features__item {
-  padding: 40px 42px 10px;
+  padding: 40px 40px 10px 43px;
 
   border: 1px solid $features-border;
   border-left: 3px solid $features-accent;
+  width: 100%;
+  max-width: 590px;
 
   &:hover {
     color: $features-color-hover;
@@ -25,7 +29,7 @@
 }
 
 .features__icon {
-  margin-bottom: 23px;
+  margin-bottom: 15px;
 
   fill: $features-accent;
 
@@ -34,7 +38,7 @@
   }
 }
 
-h2 {
+h3 {
   .features & {
     margin: 0 0 15px 0;
 

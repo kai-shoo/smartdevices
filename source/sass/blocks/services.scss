@@ -1,4 +1,6 @@
 .services {
+  padding-bottom: 127px;
+
   background-color: $services-bgc;
 
   font-family: $font-family-ui;
@@ -7,7 +9,8 @@
 }
 
 .services__container {
-  max-width: 1170px;
+  max-width: 1185px;
+  padding: 55px 0 0 15px;
 }
 
 .services__link {
@@ -55,7 +58,7 @@
 .services__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(auto-fill, 620px);
+  grid-template-rows: repeat(auto-fill, 623px);
   justify-items: center;
   row-gap: 46px;
   column-gap: 30px;
@@ -79,7 +82,7 @@
   width: 100%;
   align-items: stretch;
   justify-content: stretch;
-  padding: 53px 10px 10px 44px;
+  padding: 33px 10px 10px 44px;
 
   &:hover {
     outline: 3px solid $services-accent;
@@ -87,8 +90,11 @@
 }
 
 .services h2 {
+  margin: 29px 0 53px 0;
+
   font-family: $font-family-ui;
   font-size: 36px;
+  font-weight: normal;
   line-height: 51px;
   color: $services-color;
 }

@@ -1,10 +1,10 @@
 .hero {
-  padding: 210px 0;
+  padding: 197px 0 44px 0;
 
   color: $hero-color;
 
   background-image: url("../img/hero-background-2.svg");
-  background-position: 100% center;
+  background-position: 84% 0%;
   background-repeat: no-repeat;
 }
 
@@ -19,6 +19,7 @@
   flex-shrink: 0;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 718px;
 
   @media (max-width: $tablet) {
     max-width: 400px;
@@ -26,7 +27,8 @@
 }
 
 .hero h1 {
-  margin: 0;
+  margin: 0 0 27px 0;
+
   font-family: $font-family-ui;
   font-weight: bold;
   font-size: 80px;
@@ -36,13 +38,32 @@
 }
 
 .hero p {
-  margin: 0;
+  position: relative;
+
+  margin: 0 0 44px 0;
   font-size: 22px;
   line-height: 34px;
+  padding: 0 0 0 94px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    left: 1px;
+
+    width: 66px;
+    height: 2px;
+    background-color: $hero-color;
+  }
 }
 
 .hero__button {
+  margin: 0 0 95px 96px;
   min-width: 407px;
+
+  font-size: 16px;
+  line-height: 19px;
+
   background-color: $hero-button-bgc;
 }
 
@@ -58,5 +79,8 @@
 }
 
 .hero__image {
+  position: relative;
+  top: -56px;
+  left: 71px;
   flex-shrink: 0;
 }

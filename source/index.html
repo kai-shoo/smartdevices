@@ -7,13 +7,13 @@
     <meta name="description" content="html academy grading" />
     <title>Стартовый шаблон</title>
     <link rel="stylesheet" href="css/style.min.css" />
-    <link
+    <!-- <link
       rel="preload"
       href="fonts/open-sans-v18-latin_cyrillic-regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin
-    />
+    /> -->
   </head>
 
   <body class="page page--nojs">
@@ -120,12 +120,12 @@
           <p>
             Мы поставляем электронные комплектующие, производим печатные платы и
             предоставляем мировые технологии с 1997 года. Выполняем срочные
-            заказы и пилотные образцы до 10 дней. Наши поставщики - мировые
-            производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
-            REFOND. Печатные платы и комплектующие Service Devices применяются
-            на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ,
-            АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие
-            Производители светотехники России.
+            заказы и пилотные образцы до 10 дней. <br /><br />Наши поставщики -
+            мировые производители электронных компонентов: OSRAM, CREE,
+            HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices
+            применяются на предприятиях Российских Железных Дорог (РЖД),
+            РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
+            клиентов крупнейшие Производители светотехники России.
           </p>
           <a class="about__button button" href="#">Подробнее</a>
         </div>
@@ -154,9 +154,9 @@
       </section>
       <section class="page__form form">
         <div class="form__container container">
-          <h2>Остались вопросы? Задайте их нам!</h2>
-          <p>Мы проконсультируем Вас бесплатно</p>
           <form class="form__wrapper" action="post">
+            <h2>Остались вопросы? Задайте их нам!</h2>
+            <p>Мы проконсультируем Вас бесплатно</p>
             <label class="form__input-wrapper">
               <span class="visually-hidden">Имя</span>
               <input type="text" name="name" id="name" placeholder="Имя" />
@@ -197,66 +197,72 @@
         </div>
       </section>
     </main>
-    <footer class="page__footer footer container">
-      <div class="footer__social social">
-        <div class="social__logo">
-          <img src="img/logo-footer.svg" alt="Smart devices умные технологии" />
+    <footer class="page__footer footer">
+      <div class="footer__container container">
+        <div class="footer__social social">
+          <div class="social__logo">
+            <img
+              src="img/logo-footer.svg"
+              alt="Smart devices умные технологии"
+            />
+          </div>
+          <div class="social__list">
+            <a class="social__item" href="#">
+              <svg width="27" height="27">
+                <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+              </svg>
+            </a>
+            <a class="social__item" href="#">
+              <svg width="27" height="27">
+                <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
+              </svg>
+            </a>
+            <a class="social__item" href="#">
+              <svg width="27" height="27">
+                <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
+              </svg>
+            </a>
+          </div>
         </div>
-        <div class="social__list">
-          <a href="#">
-            <svg width="27" height="27">
-              <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
-            </svg>
-          </a>
-          <a href="#">
-            <svg width="27" height="27">
-              <use xlink:href="img/sprite_auto.svg#icon-ok"></use>
-            </svg> </a
-          ><a href="#">
-            <svg width="27" height="27">
-              <use xlink:href="img/sprite_auto.svg#icon-vk"></use>
-            </svg>
-          </a>
+        <nav class="footer__nav">
+          <h3>Разделы сайта</h3>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">О компании</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Продукты</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Производство печатных плат</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Монтаж печатных плат</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Комплектующие</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Доставка</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__contacts">
+          <h3>Наш офис</h3>
+          <p>г. Мытищи, Олимпийский проспект, д.10</p>
+          <p>+7 (495) 589-40-50</p>
+          <p>+7 (925) 003-87-67</p>
+          <p>+7 (926) 926-080-79</p>
         </div>
-      </div>
-      <nav class="footer__nav">
-        <h3>Разделы сайта</h3>
-        <ul class="footer__list">
-          <li class="footer__item">
-            <a class="footer__link" href="#">О компании</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Продукты</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Производство печатных плат</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Монтаж печатных плат</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Комплектующие</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Доставка</a>
-          </li>
-          <li class="footer__item">
-            <a class="footer__link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="footer__contacts">
-        <h3>Наш офис</h3>
-        <p>г. Мытищи, Олимпийский проспект, д.10</p>
-        <p>+7 (495) 589-40-50</p>
-        <p>+7 (925) 003-87-67</p>
-        <p>+7 (926) 926-080-79</p>
-      </div>
-      <div class="footer__bottom">
-        <p>Все права защищены</p>
-        <p>1999-2018 SD Service Devices</p>
-        <p>Условия конфиденциальности</p>
-        <p>Developed by wow studio</p>
+        <div class="footer__bottom">
+          <p>Все права защищены</p>
+          <p>1999-2018 SD Service Devices</p>
+          <p>Условия конфиденциальности</p>
+          <p>Developed by wow studio</p>
+        </div>
       </div>
     </footer>
     <script src="js/vendors.js"></script>

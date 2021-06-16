@@ -1,9 +1,20 @@
 .form {
+  padding-top: 90px;
+  padding-bottom: 112px;
+
   background-color: $form-bgc;
+  background-image: url("../img/form-plane.png"),
+    url("../img/hero-background-2.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 350px 160px, 175px -60px;
 
   font-size: 14px;
   line-height: 16px;
   color: $form-color;
+}
+
+.form__container {
+  margin-left: auto;
 }
 
 .form__wrapper {
@@ -11,9 +22,12 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 31px;
   row-gap: 40px;
+  justify-content: end;
   align-items: center;
-  max-width: 600px;
+  max-width: 570px;
   width: 100%;
+  margin-left: auto;
+  margin-right: 120px;
 }
 
 .form input:not([type="checkbox"]),
@@ -21,12 +35,12 @@
   resize: none;
   width: 100%;
   height: 50px;
-  padding: 16px 14px;
+  padding: 5px 20px 18px 20px;
 
   font-family: inherit;
   line-height: 1.5;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 150%;
 
   border: none;
   background-color: rgba($form-color, 0.1);
@@ -44,7 +58,7 @@
     grid-column-start: span 2;
 
     textarea {
-      height: 244px;
+      height: 150px;
     }
   }
 
@@ -55,6 +69,8 @@
 }
 
 .form__button {
+  min-height: 45px;
+
   background-color: transparent;
 }
 
@@ -64,6 +80,7 @@
   width: 16px;
   height: 16px;
   margin-right: 16px;
+  margin-left: 10px;
 
   border: 1px solid $form-color;
 }
@@ -76,4 +93,23 @@
 
 .form__input-wrapper--checkbox input:focus ~ .form__input-checkbox {
   outline: 1px solid black;
+}
+
+.form h2 {
+  font-family: $font-family-ui;
+  grid-column-start: span 2;
+  margin: 0;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  color: $form-color;
+  margin-bottom: -30px;
+}
+
+.form p {
+  grid-column-start: span 2;
+  margin-top: 0;
+
+  font-size: 16px;
+  line-height: 22px;
 }

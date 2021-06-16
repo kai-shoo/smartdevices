@@ -4,8 +4,9 @@
   flex-wrap: wrap;
 }
 
-.sosicla__logo {
+.social__logo {
   flex-basis: 100%;
+  margin-bottom: 45px;
 
   @media (max-width: $tablet) {
     order: 1;
@@ -16,4 +17,8 @@
   @media (max-width: $tablet) {
     order: 3;
   }
+}
+
+.social__item {
+  margin-right: 6px;
 }
