@@ -4,8 +4,15 @@
   color: $hero-color;
 
   background-image: url("../img/hero-background-2.svg");
-  background-position: 84% 0%;
+  background-position: 1030px 0%;
   background-repeat: no-repeat;
+
+  @media (max-width: $tablet) {
+    padding: 102px 0 67px 63px;
+
+    background-position: 442px -133px;
+    background-size: 530px 530px;
+  }
 }
 
 .hero__container {
@@ -35,6 +42,15 @@
   line-height: 94px;
   letter-spacing: 0.07em;
   text-transform: uppercase;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 30px 0;
+
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 0.07em;
+  }
 }
 
 .hero p {
@@ -55,6 +71,17 @@
     height: 2px;
     background-color: $hero-color;
   }
+
+  @media (max-width: $tablet) {
+    padding: 0 0 10px 50px;
+
+    font-size: 18px;
+    line-height: 156.8%;
+
+    &::after {
+      width: 35px;
+    }
+  }
 }
 
 .hero__button {
@@ -65,6 +92,12 @@
   line-height: 19px;
 
   background-color: $hero-button-bgc;
+  border: none;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 95px 50px;
+    min-width: 379px;
+  }
 }
 
 .hero__scroll {
@@ -76,6 +109,10 @@
   opacity: 0.5;
 
   transform: rotate(-180deg);
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
 }
 
 .hero__image {
@@ -83,4 +120,14 @@
   top: -56px;
   left: 71px;
   flex-shrink: 0;
+
+  @media (max-width: $tablet) {
+    top: -75px;
+    left: 20px;
+
+    & img {
+      width: 465px;
+      height: 340px;
+    }
+  }
 }

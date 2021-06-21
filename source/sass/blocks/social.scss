@@ -8,14 +8,18 @@
   flex-basis: 100%;
   margin-bottom: 45px;
 
-  @media (max-width: $tablet) {
-    order: 1;
+  @media (max-width: 1380px) {
+    order: 0;
+    flex-basis: 40%;
+    margin-bottom: 0;
   }
 }
 
 .social__list {
-  @media (max-width: $tablet) {
-    order: 3;
+  @media (max-width: 1380px) {
+    flex-basis: 18%;
+    order: 2;
+    margin-right: -20px;
   }
 }
 

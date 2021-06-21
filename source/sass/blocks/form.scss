@@ -6,15 +6,21 @@
   background-image: url("../img/form-plane.png"),
     url("../img/hero-background-2.svg");
   background-repeat: no-repeat, no-repeat;
-  background-position: 350px 160px, 175px -60px;
+  background-position: right 75% top 160px, right 86% top -61px;
+  // right 732px top 160px,right 768px top -61px
 
   font-size: 14px;
   line-height: 16px;
   color: $form-color;
-}
 
-.form__container {
-  margin-left: auto;
+  @media (max-width: 1544px) {
+    background-image: none;
+  }
+
+  @media (max-width: $tablet) {
+    padding-top: 80px;
+    padding-bottom: 105px;
+  }
 }
 
 .form__wrapper {
@@ -28,6 +34,14 @@
   width: 100%;
   margin-left: auto;
   margin-right: 120px;
+
+  @media (max-width: 1544px) {
+    margin-right: auto;
+  }
+
+  @media (max-width: $tablet) {
+    max-width: 590px;
+  }
 }
 
 .form input:not([type="checkbox"]),
@@ -41,6 +55,7 @@
   line-height: 1.5;
   font-size: 16px;
   line-height: 150%;
+  color: $form-color;
 
   border: none;
   background-color: rgba($form-color, 0.1);
@@ -51,6 +66,10 @@
     line-height: 22px;
     color: $form-color;
   }
+
+  @media (max-width: $tablet) {
+    padding: 5px 20px 5px;
+  }
 }
 
 .form__input-wrapper {
@@ -59,6 +78,10 @@
 
     textarea {
       height: 150px;
+
+      @media (max-width: $tablet) {
+        height: 165px;
+      }
     }
   }
 
@@ -104,6 +127,13 @@
   line-height: 51px;
   color: $form-color;
   margin-bottom: -30px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: -23px;
+
+    font-size: 32px;
+    line-height: 140.62%;
+  }
 }
 
 .form p {
@@ -112,4 +142,8 @@
 
   font-size: 16px;
   line-height: 22px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 12px;
+  }
 }

@@ -15,14 +15,29 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: -14px 6px;
+
+  @media (max-width: $tablet) {
+    padding: 0 0 0 210px;
+
+    background-position: 3px 0px;
+  }
 }
 
 .about h2 {
   margin: 0 0 20px 0;
 
+  font-weight: normal;
   font-family: $font-family-ui;
   font-size: 36px;
   line-height: 51px;
+
+  @media (max-width: $tablet) {
+    margin: 0 0 28px;
+
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 140.62%;
+  }
 }
 
 .about p {
@@ -31,6 +46,17 @@
 
   font-size: 16px;
   line-height: 22px;
+
+  @media (max-width: $tablet) {
+    margin-left: 3px;
+    padding-right: 25px;
+
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    text-overflow: "...";
+  }
 }
 
 .about__button {

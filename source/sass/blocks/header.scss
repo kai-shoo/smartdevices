@@ -17,6 +17,13 @@
 
   line-height: 18px;
   color: $white;
+
+  @media (max-width: $tablet) {
+    padding-top: 20px;
+    padding-bottom: 10px;
+
+    min-height: 50px;
+  }
 }
 
 .header__logo {
@@ -42,10 +49,14 @@
       margin-right: 25px;
       margin-left: 7px;
     }
+
+    &:nth-last-child(2) {
+      margin-right: 0;
+    }
   }
 }
 
-.header__link-icon {
+.header__link-icon-wrapper {
   margin-right: 4px;
 
   vertical-align: middle;
@@ -56,6 +67,22 @@
 
   @media (max-width: $tablet) {
     margin-right: 0;
+  }
+}
+
+.header__link-icon {
+  @media (max-width: $tablet) {
+    margin-right: 0;
+
+    &--mail {
+      width: 26px;
+      height: 19px;
+    }
+
+    &--phone {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 
