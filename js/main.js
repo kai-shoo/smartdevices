@@ -40,11 +40,12 @@
 /* eslint-disable no-unused-vars */
 (function () {
   const phoneInput = document.querySelector(`input[type="tel"]`);
-  const form = document.querySelector(`.form__container`);
+  const form = document.querySelector(`.form__wrapper`);
 
   if (phoneInput && form) {
     const phoneMask = IMask(phoneInput, {
       mask: `+{7}(000)000-00-00`,
+      lazy: true,
     });
 
     form.addEventListener(`submit`, (e) => {
@@ -55,6 +56,24 @@
         body: formData,
       });
     });
+
+    phoneInput.addEventListener(`focus`, () => {
+      phoneMask.updateOptions({
+        lazy: false,
+      });
+    });
+    phoneInput.addEventListener(
+      `blur`,
+      () => {
+        phoneMask.updateOptions({
+          lazy: true,
+        });
+        if (!phoneMask.masked.rawInputValue) {
+          phoneMask.value = ``;
+        }
+      },
+      true
+    );
   }
 })();
 ;
