@@ -13,6 +13,11 @@
     flex-basis: 40%;
     margin-bottom: 0;
   }
+
+  @media (max-width: $mobile) {
+    flex-basis: 100%;
+    margin-bottom: 21px;
+  }
 }
 
 .social__list {
@@ -20,6 +25,13 @@
     flex-basis: 18%;
     order: 2;
     margin-right: -20px;
+  }
+
+  @media (max-width: $mobile) {
+    flex-basis: 100%;
+    margin-top: 32px;
+    margin-right: 0;
+    margin-bottom: 30px;
   }
 }
 

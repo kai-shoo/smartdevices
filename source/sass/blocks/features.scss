@@ -15,6 +15,9 @@
 
   @media (max-width: $mobile) {
     grid-template-columns: 1fr;
+    padding: 37px 15px;
+    row-gap: 20px;
+    grid-auto-rows: (minmax(232px, min-content));
   }
 }
 
@@ -34,6 +37,11 @@
 
   @media (max-width: $tablet) {
     padding: 23px 20px 20px 25px;
+    max-width: none;
+  }
+
+  @media (max-width: $mobile) {
+    padding-right: 15px;
   }
 }
 
@@ -63,6 +71,11 @@ h3 {
 
     @media (max-width: $tablet) {
       margin: 0 0 8px;
+    }
+
+    @media (max-width: $mobile) {
+      font-size: 20px;
+      line-height: 140.62%;
     }
   }
 

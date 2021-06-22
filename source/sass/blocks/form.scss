@@ -21,6 +21,11 @@
     padding-top: 80px;
     padding-bottom: 105px;
   }
+
+  @media (max-width: $mobile) {
+    padding-top: 30px;
+    padding-bottom: 12px;
+  }
 }
 
 .form__wrapper {
@@ -41,6 +46,14 @@
 
   @media (max-width: $tablet) {
     max-width: 590px;
+  }
+
+  @media (max-width: $mobile) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    row-gap: 0;
   }
 }
 
@@ -73,14 +86,26 @@
 }
 
 .form__input-wrapper {
+  @media (max-width: $mobile) {
+    margin-bottom: 31px;
+  }
+
   &--textarea {
     grid-column-start: span 2;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 27px;
+    }
 
     textarea {
       height: 150px;
 
       @media (max-width: $tablet) {
         height: 165px;
+      }
+
+      @media (max-width: $mobile) {
+        height: 105px;
       }
     }
   }
@@ -95,6 +120,13 @@
   min-height: 45px;
 
   background-color: transparent;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 32px;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .form__input-checkbox {
@@ -106,6 +138,10 @@
   margin-left: 10px;
 
   border: 1px solid $form-color;
+
+  @media (max-width: $mobile) {
+    margin-left: 0;
+  }
 }
 
 .form__input-wrapper--checkbox input:checked ~ .form__input-checkbox {
@@ -134,6 +170,13 @@
     font-size: 32px;
     line-height: 140.62%;
   }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 12px;
+
+    font-size: 28px;
+    line-height: 140.62%;
+  }
 }
 
 .form p {
@@ -145,5 +188,9 @@
 
   @media (max-width: $tablet) {
     margin-bottom: 12px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 26px;
   }
 }

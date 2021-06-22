@@ -21,6 +21,11 @@
 
     background-position: 3px 0px;
   }
+
+  @media (max-width: $mobile) {
+    background-image: none;
+    padding: 0 25px 0 15px;
+  }
 }
 
 .about h2 {
@@ -38,6 +43,12 @@
     font-size: 32px;
     line-height: 140.62%;
   }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 20px;
+
+    font-size: 28px;
+  }
 }
 
 .about p {
@@ -46,6 +57,10 @@
 
   font-size: 16px;
   line-height: 22px;
+
+  .about__text-mobile-break {
+    display: none;
+  }
 
   @media (max-width: $tablet) {
     margin-left: 3px;
@@ -56,6 +71,16 @@
     -webkit-line-clamp: 9;
     -webkit-box-orient: vertical;
     text-overflow: "...";
+  }
+
+  @media (max-width: $mobile) {
+    -webkit-line-clamp: 16;
+    margin-right: -15px;
+    margin-bottom: 25px;
+    padding-right: 0;
+    .about__text-mobile-break {
+      display: unset;
+    }
   }
 }
 

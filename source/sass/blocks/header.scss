@@ -54,6 +54,15 @@
       margin-right: 0;
     }
   }
+
+  @media (max-width: $mobile) {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+    &:nth-last-child(2) {
+      margin-right: 0;
+    }
+  }
 }
 
 .header__link-icon-wrapper {
