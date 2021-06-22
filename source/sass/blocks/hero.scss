@@ -29,6 +29,10 @@
   @media (max-width: $mobile) {
     flex-direction: column;
   }
+
+  @media (max-width: $mobile) {
+    align-items: center;
+  }
 }
 
 .hero__content {
@@ -128,7 +132,7 @@
   line-height: 19px;
 
   background-color: $hero-button-bgc;
-  border: none;
+  border-color: $hero-button-bgc;
 
   @media (max-width: $tablet) {
     margin: 0 0 95px 50px;
@@ -140,6 +144,11 @@
     margin: 0;
     align-self: center;
     width: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: $white;
   }
 }
 

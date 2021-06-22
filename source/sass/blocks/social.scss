@@ -37,4 +37,19 @@
 
 .social__item {
   margin-right: 6px;
+
+  svg {
+    fill: $social-icon;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $primary;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }

@@ -104,11 +104,19 @@ a {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border: 1px solid #ffffff;
-  border-radius: 5px; }
+  border-radius: 5px;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out; }
   @media (max-width: 767px) {
     .button {
       font-size: 16px;
       line-height: 19px; } }
+  .button:hover, .button:focus {
+    background-color: #00b2ff;
+    color: #ffffff;
+    border-color: #00b2ff; }
+  .button:active {
+    opacity: 0.7; }
 
 .page {
   display: -webkit-box;
@@ -249,10 +257,23 @@ a {
       -ms-flex-positive: 1;
           flex-grow: 1; }
 
+@-webkit-keyframes lighthouse {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0.5; } }
+
+@keyframes lighthouse {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0.5; } }
+
 .header__link {
   color: inherit;
   vertical-align: middle;
-  margin-right: 88px; }
+  margin-right: 88px;
+  opacity: 1; }
   .header__link:last-child {
     margin-right: 50px; }
   .header__link:nth-last-child(2) {
@@ -268,6 +289,12 @@ a {
       margin-right: 16px; }
     .header__link:nth-last-child(2) {
       margin-right: 0; } }
+  .header__link:hover, .header__link:focus {
+    -webkit-animation: 0.9s ease-in 0.5s infinite alternate lighthouse;
+            animation: 0.9s ease-in 0.5s infinite alternate lighthouse; }
+    .header__link:hover .header__link-icon, .header__link:focus .header__link-icon {
+      -webkit-transform: scale(1.3);
+              transform: scale(1.3); }
 
 .header__link-icon-wrapper {
   margin-right: 4px;
@@ -329,6 +356,11 @@ a {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; } }
+  @media (max-width: 767px) {
+    .hero__container {
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
 
 .hero__content {
   display: -webkit-box;
@@ -411,7 +443,7 @@ a {
   font-size: 16px;
   line-height: 19px;
   background-color: #00b2ff;
-  border: none; }
+  border-color: #00b2ff; }
   @media (max-width: 1023px) {
     .hero__button {
       margin: 0 0 95px 50px;
@@ -423,6 +455,8 @@ a {
       -ms-flex-item-align: center;
           align-self: center;
       width: 100%; } }
+  .hero__button:hover, .hero__button:focus {
+    border-color: #ffffff; }
 
 @media (max-width: 767px) {
   .hero__button-text {
@@ -892,6 +926,10 @@ a {
       margin-bottom: 32px;
       font-size: 14px;
       line-height: 16px; } }
+  .form__button:hover, .form__button:focus {
+    background-color: white;
+    border-color: #00b2ff;
+    color: #00b2ff; }
 
 .form__input-checkbox {
   -webkit-box-flex: 0;
@@ -994,6 +1032,12 @@ a {
 
 .social__item {
   margin-right: 6px; }
+  .social__item svg {
+    fill: #cdcdcd; }
+  .social__item:hover svg, .social__item:focus svg {
+    fill: #00b2ff; }
+  .social__item:active {
+    opacity: 0.7; }
 
 .footer {
   position: relative;
@@ -1057,6 +1101,12 @@ a {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; } }
+
+.footer__link:hover, .footer__link:focus {
+  opacity: 1; }
+
+.footer__link:active {
+  opacity: 0.7; }
 
 .footer__link,
 .footer p {
@@ -1237,7 +1287,8 @@ a {
           flex-basis: 100%;
       margin-top: 0;
       -ms-flex-item-align: stretch;
-          align-self: stretch; }
+          align-self: stretch;
+      margin-right: 0; }
       .footer__contacts::before {
         content: "";
         position: absolute;
