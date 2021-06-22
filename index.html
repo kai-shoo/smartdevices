@@ -21,11 +21,11 @@
       <div class="header__container container">
         <div class="header__logo">
           <picture>
-            <source srcset="img/logo-mobile.svg" media="(mxn-width: 767px)">
+            <source srcset="img/logo-mobile.svg" media="(max-width: 767px)">
             <img src="img/logo.svg" alt="Smart devices умные технологии">
           </picture>
         </div>
-        <a class="header__link" href="mailto:info@sd.ru">
+        <a class="header__link header__link--mail" href="mailto:info@sd.ru">
           <span class="header__link-icon-wrapper header__link-icon-wrapper--mail">
             <svg class="header__link-icon header__link-icon--mail" width="19" height="14">
               <use xlink:href="img/sprite_auto.svg#icon-mail"></use>
@@ -52,7 +52,9 @@
             <p>
               производство и монтаж, поставка комплектующих, блоков и модулей
             </p>
-            <a class="hero__button button" href="#">Получить бесплатную консультацию</a>
+            <a class="hero__button button" href="#"><span class="hero__button-text">Получить бесплатную консультацию</span>
+              <span class="hero__button-mobile-text">Бесплатная консультация</span>
+            </a>
             <a class="hero__scroll" href="#">Скролл вниз</a>
           </div>
           <div class="hero__image">
@@ -118,12 +120,11 @@
           <p>
             Мы поставляем электронные комплектующие, производим печатные платы и
             предоставляем мировые технологии с 1997 года. Выполняем срочные
-            заказы и пилотные образцы до 10 дней. <br><br>Наши поставщики -
-            мировые производители электронных компонентов: OSRAM, CREE,
-            HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices
-            применяются на предприятиях Российских Железных Дорог (РЖД),
-            РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
-            клиентов крупнейшие Производители светотехники России.
+            заказы и пилотные образцы до 10 дней. <br><br><br class="about__text-mobile-break">Наши поставщики - мировые производители электронных компонентов:
+            OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие
+            Service Devices применяются на предприятиях Российских Железных
+            Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники.
+            Среди наших клиентов крупнейшие Производители светотехники России.
           </p>
           <a class="about__button button" href="#">Подробнее</a>
         </div>
@@ -157,21 +158,21 @@
             <p>Мы проконсультируем Вас бесплатно</p>
             <label class="form__input-wrapper">
               <span class="visually-hidden">Имя</span>
-              <input type="text" name="name" id="name" placeholder="Имя">
+              <input type="text" name="name" id="name" placeholder="Имя" required="">
             </label>
             <label class="form__input-wrapper">
-              <span class="visually-hidden">Имя</span>
-              <input type="tel" name="phone" id="phone" placeholder="Телефон">
+              <span class="visually-hidden">Телефон</span>
+              <input type="tel" name="phone" id="phone" placeholder="Телефон" required="">
             </label>
             <label class="form__input-wrapper form__input-wrapper--textarea">
-              <span class="visually-hidden">Имя</span>
-              <textarea name="question" id="question" placeholder="Ваш вопрос">
+              <span class="visually-hidden">Ваш вопрос</span>
+              <textarea name="question" id="question" placeholder="Ваш вопрос" required="">
             </textarea></label>
             <button class="button form__button" type="submit">
               Задать вопрос
             </button>
             <label class="form__input-wrapper form__input-wrapper--checkbox">
-              <input class="visually-hidden" type="checkbox" name="personalData" id="personalData">
+              <input class="visually-hidden" type="checkbox" name="personalData" id="personalData" required="">
               <span class="form__input-checkbox"></span>
               <span class="form__label">Я согласен на обработку персональных данных</span>
             </label>
@@ -180,7 +181,7 @@
       </section>
     </main>
     <footer class="page__footer footer">
-      <div class="footer__container container">
+      <div class="footer__container container accordion-container">
         <div class="footer__social social">
           <div class="social__logo">
             <img src="img/logo-footer.svg" alt="Smart devices умные технологии">
@@ -203,38 +204,42 @@
             </a>
           </div>
         </div>
-        <nav class="footer__nav">
-          <h3>Разделы сайта</h3>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a class="footer__link" href="#">О компании</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Продукты</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Производство печатных плат</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Монтаж печатных плат</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Комплектующие</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Доставка</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Контакты</a>
-            </li>
-          </ul>
+        <nav class="footer__nav ac">
+          <h3 class="ac-header ac-trigger">Разделы сайта</h3>
+          <div class="ac-panel">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">О компании</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Продукты</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Производство печатных плат</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Монтаж печатных плат</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Комплектующие</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Доставка</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </nav>
-        <div class="footer__contacts">
-          <h3>Наш офис</h3>
-          <p>г. Мытищи, Олимпийский проспект, д.10</p>
-          <p>+7 (495) 589-40-50</p>
-          <p>+7 (925) 003-87-67</p>
-          <p>+7 (926) 926-080-79</p>
+        <div class="footer__contacts ac">
+          <h3 class="ac-header ac-trigger">Наш офис</h3>
+          <div class="ac-panel">
+            <p>г. Мытищи, Олимпийский проспект, д.10</p>
+            <p>+7 (495) 589-40-50</p>
+            <p>+7 (925) 003-87-67</p>
+            <p>+7 (926) 926-080-79</p>
+          </div>
         </div>
         <div class="footer__bottom">
           <p>Все права защищены</p>
