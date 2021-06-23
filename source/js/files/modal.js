@@ -12,6 +12,8 @@
 
       document.addEventListener(`keydown`, closeModal);
       modalClose.addEventListener(`click`, closeModal);
+
+      trapFocus(modal);
     };
 
     const closeModal = function (e) {
@@ -38,5 +40,34 @@
         openModal();
       })
     );
+  }
+
+  function trapFocus(element) {
+    const focusableEls = element.querySelectorAll(`input, textarea, button`);
+    const firstFocusableEl = focusableEls[0];
+    const lastFocusableEl = focusableEls[focusableEls.length - 1];
+    const KEYCODE_TAB = 9;
+
+    firstFocusableEl.focus();
+
+    document.addEventListener(`keydown`, function (e) {
+      const isTabPressed = e.key === `Tab` || e.keyCode === KEYCODE_TAB;
+
+      if (!isTabPressed) {
+        return;
+      }
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstFocusableEl) {
+          lastFocusableEl.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastFocusableEl) {
+          firstFocusableEl.focus();
+          e.preventDefault();
+        }
+      }
+    });
   }
 })();

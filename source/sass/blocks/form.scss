@@ -13,6 +13,12 @@
   line-height: 16px;
   color: $form-color;
 
+  @media screen and (min-resolution: 120dpi),
+    screen and (min-resolution: 1.25dppx) {
+    background-image: url("../img/form-plane@2x.png"),
+      url("../img/hero-background-2.svg");
+  }
+
   @media (max-width: 1544px) {
     background-image: none;
   }
@@ -65,13 +71,17 @@
   padding: 5px 20px 18px 20px;
 
   font-family: inherit;
-  line-height: 1.5;
   font-size: 16px;
   line-height: 150%;
-  color: $form-color;
+  color: rgba($form-color, 0.9);
 
   border: none;
   background-color: rgba($form-color, 0.1);
+
+  &:focus,
+  &:hover {
+    outline: 1px solid $white;
+  }
 
   &::placeholder {
     font-family: inherit;
@@ -86,6 +96,8 @@
 }
 
 .form__input-wrapper {
+  cursor: pointer;
+
   @media (max-width: $mobile) {
     margin-bottom: 31px;
   }
@@ -158,7 +170,7 @@
 }
 
 .form__input-wrapper--checkbox input:focus ~ .form__input-checkbox {
-  outline: 1px solid black;
+  outline: 2px solid $white;
 }
 
 .form__wrapper h2 {

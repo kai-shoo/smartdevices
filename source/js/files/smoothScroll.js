@@ -7,7 +7,10 @@
 
       const id = e.target.hash;
       const target = document.querySelector(`${id}`);
-      target.scrollIntoView({ behavior: `smooth`, inline: `end` });
+
+      if (target) {
+        target.scrollIntoView({behavior: `smooth`, inline: `end`});
+      }
     });
   });
 })();

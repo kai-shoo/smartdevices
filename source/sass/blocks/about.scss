@@ -12,14 +12,16 @@
   max-width: 1170px;
 
   background-image: url("../img/about-year.png");
-  background-size: contain;
+  background-size: auto 307px;
   background-repeat: no-repeat;
   background-position: -14px 6px;
 
   @media (max-width: $tablet) {
     padding: 0 0 0 210px;
 
-    background-position: 3px 0px;
+    background-size: auto 345px;
+
+    background-position: 3px 0;
   }
 
   @media (max-width: $mobile) {
@@ -66,10 +68,9 @@
     margin-left: 3px;
     padding-right: 25px;
 
-    display: -webkit-box;
     overflow: hidden;
-    -webkit-line-clamp: 9;
-    -webkit-box-orient: vertical;
+    line-clamp: 9;
+    box-orient: vertical;
     text-overflow: "...";
   }
 
@@ -78,6 +79,7 @@
     margin-right: -15px;
     margin-bottom: 25px;
     padding-right: 0;
+
     .about__text-mobile-break {
       display: unset;
     }

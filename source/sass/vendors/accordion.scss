@@ -5,9 +5,6 @@
     box-sizing: border-box;
   }
 
-  .ac .ac-header {
-  }
-
   .ac .ac-trigger {
     color: #c4c4c4;
     text-align: left;
@@ -16,7 +13,6 @@
     display: block;
     cursor: pointer;
     background-color: transparent;
-    -webkit-transition: color 0.25s ease;
     transition: color 0.25s ease;
     position: relative;
     text-decoration: none;
@@ -45,9 +41,7 @@
 
   .ac .ac-panel {
     overflow: hidden;
-    -webkit-transition-property: height, visibility;
     transition-property: height, visibility;
-    -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
 
     padding-bottom: 12px;
@@ -57,7 +51,7 @@
   }
 
   .ac .ac-panel .ac-text {
-    color: #111;
+    color: #111111;
     padding: 10px;
     margin: 0;
   }

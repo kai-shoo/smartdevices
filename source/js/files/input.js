@@ -27,16 +27,16 @@
         });
       });
       phoneInput.addEventListener(
-        `blur`,
-        () => {
-          phoneMask.updateOptions({
-            lazy: true,
-          });
-          if (!phoneMask.masked.rawInputValue) {
-            phoneMask.value = ``;
-          }
-        },
-        true
+          `blur`,
+          () => {
+            phoneMask.updateOptions({
+              lazy: true,
+            });
+            if (!phoneMask.masked.rawInputValue) {
+              phoneMask.value = ``;
+            }
+          },
+          true
       );
     });
   }

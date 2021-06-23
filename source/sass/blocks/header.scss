@@ -1,6 +1,8 @@
 .header {
   background-color: $header-background;
   background-image: url("../img/hero-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   overflow: hidden;
 }
@@ -28,6 +30,13 @@
 
 .header__logo {
   flex-grow: 1;
+
+  @media (max-width: $mobile) {
+    img {
+      width: 38px;
+      height: 38px;
+    }
+  }
 }
 
 @keyframes lighthouse {
@@ -70,6 +79,7 @@
     &:not(:last-child) {
       margin-right: 16px;
     }
+
     &:nth-last-child(2) {
       margin-right: 0;
     }
@@ -83,9 +93,6 @@
     }
 
     animation: 0.9s ease-in 0.5s infinite alternate lighthouse;
-  }
-
-  &:active {
   }
 }
 
@@ -128,6 +135,7 @@
 .header__request {
   min-width: 180px;
   min-height: 45px;
+
   @media (max-width: $tablet) {
     display: none;
   }
