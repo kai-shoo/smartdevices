@@ -303,6 +303,8 @@
 }
 
 .footer__text {
-  display: block;
-  margin-top: 34px;
+  @media (max-width: $mobile) {
+    display: block;
+    margin-top: 34px;
+  }
 }

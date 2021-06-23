@@ -1,14 +1,13 @@
 (function () {
   window.addEventListener(`hashchange`, (e) => e.preventDefault());
 
-  document.addEventListener(`click`, (e) => {
-    e.preventDefault();
-    const anchorLink = e.target.closest(`a[href^='#']`);
+  document.querySelectorAll(`a[href^='#']`).forEach((link) => {
+    link.addEventListener(`click`, (e) => {
+      e.preventDefault();
 
-    if (anchorLink) {
-      const id = anchorLink.hash;
+      const id = e.target.hash;
       const target = document.querySelector(`${id}`);
       target.scrollIntoView({ behavior: `smooth`, inline: `end` });
-    }
+    });
   });
 })();
