@@ -19,12 +19,12 @@
   <body class="page page--nojs">
     <header class="page__header header">
       <div class="header__container container">
-        <div class="header__logo">
+        <a class="header__logo">
           <picture>
             <source srcset="img/logo-mobile.svg" media="(max-width: 767px)">
-            <img src="img/logo.svg" alt="Smart devices умные технологии">
+            <img src="img/logo.svg" alt="Smart devices умные технологии" width="202" height="52">
           </picture>
-        </div>
+        </a>
         <a class="header__link header__link--mail" href="mailto:info@sd.ru">
           <span class="header__link-icon-wrapper header__link-icon-wrapper--mail">
             <svg class="header__link-icon header__link-icon--mail" width="19" height="14">
@@ -58,7 +58,7 @@
             <a class="hero__scroll" href="#features">Скролл вниз</a>
           </div>
           <div class="hero__image">
-            <img src="img/hero.png" alt="фон" width="705" height="515">
+            <img src="img/hero.png" srcset="img/hero@2x.png 2x" alt="фон" width="705" height="515">
           </div>
         </div>
       </section>
@@ -183,9 +183,9 @@
     <footer class="page__footer footer">
       <div class="footer__container container accordion-container">
         <div class="footer__social social">
-          <div class="social__logo">
-            <img src="img/logo-footer.svg" alt="Smart devices умные технологии">
-          </div>
+          <a class="social__logo">
+            <img src="img/logo-footer.svg" alt="Smart devices умные технологии" width="216" height="52">
+          </a>
           <div class="social__list">
             <a class="social__item" href="#">
               <svg width="27" height="27">
@@ -257,7 +257,7 @@
     <div class="modal modal" id="modal">
       <div class="modal__overlay">
         <div class="modal__window">
-          <div class="modal__wrapper">
+          <div class="form modal__wrapper">
             <form class="form__wrapper modal__form" action="https://echo.htmlacademy.ru/" method="post">
               <h2>Закажите звонок</h2>
               <p>
@@ -266,21 +266,21 @@
               </p>
               <label class="form__input-wrapper">
                 <span class="visually-hidden">Имя</span>
-                <input type="text" name="name" id="name" placeholder="Имя" required="">
+                <input type="text" name="name" id="modal-name" placeholder="Имя" required="">
               </label>
               <label class="form__input-wrapper">
                 <span class="visually-hidden">Телефон</span>
-                <input type="tel" name="phone" id="phone" placeholder="Телефон" required="">
+                <input type="tel" name="phone" id="modal-phone" placeholder="Телефон" required="">
               </label>
               <label class="form__input-wrapper form__input-wrapper--textarea">
                 <span class="visually-hidden">Ваш вопрос</span>
-                <textarea name="question" id="question" placeholder="Ваш вопрос" required=""></textarea>
+                <textarea name="question" id="modal-question" placeholder="Ваш вопрос" required=""></textarea>
               </label>
               <button class="button form__button" type="submit">
                 Задать вопрос
               </button>
               <label class="form__input-wrapper form__input-wrapper--checkbox">
-                <input class="visually-hidden" type="checkbox" name="personalData" id="personalData" required="">
+                <input class="visually-hidden" type="checkbox" name="personalData" id="modal-personalData" required="">
                 <span class="form__input-checkbox"></span>
                 <span class="form__label">Я согласен на обработку персональных данных</span>
               </label>

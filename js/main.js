@@ -28,16 +28,16 @@
         });
       });
       phoneInput.addEventListener(
-        `blur`,
-        () => {
-          phoneMask.updateOptions({
-            lazy: true,
-          });
-          if (!phoneMask.masked.rawInputValue) {
-            phoneMask.value = ``;
-          }
-        },
-        true
+          `blur`,
+          () => {
+            phoneMask.updateOptions({
+              lazy: true,
+            });
+            if (!phoneMask.masked.rawInputValue) {
+              phoneMask.value = ``;
+            }
+          },
+          true
       );
     });
   }
@@ -73,15 +73,18 @@
 
       const id = e.target.hash;
       const target = document.querySelector(`${id}`);
-      target.scrollIntoView({ behavior: `smooth`, inline: `end` });
+
+      if (target) {
+        target.scrollIntoView({behavior: `smooth`, inline: `end`});
+      }
     });
   });
 })();
 ;
 (function () {
   const inputs = [`name`, `phone`, `question`]
-    .map((inputName) => [...document.querySelectorAll(`[name='${inputName}']`)])
-    .flat();
+      .map((inputName) => [...document.querySelectorAll(`[name='${inputName}']`)])
+      .flat();
 
   const getInputsValue = () => {
     inputs.forEach((inputEl) => {
@@ -95,17 +98,21 @@
   window.addEventListener(`DOMContentLoaded`, getInputsValue);
 
   inputs.forEach((input) => {
-    if (!input) return;
+    if (!input) {
+      return;
+    }
 
-    input.addEventListener("input", () => {
+    input.addEventListener(`input`, () => {
       localStorage.setItem(`${input.name}`, input.value);
     });
   });
 
   inputs.forEach((input) => {
-    if (!input) return;
+    if (!input) {
+      return;
+    }
 
-    input.addEventListener("blur", getInputsValue);
+    input.addEventListener(`blur`, getInputsValue);
   });
 })();
 ;
@@ -123,6 +130,8 @@
 
       document.addEventListener(`keydown`, closeModal);
       modalClose.addEventListener(`click`, closeModal);
+
+      trapFocus(modal);
     };
 
     const closeModal = function (e) {
@@ -149,6 +158,35 @@
         openModal();
       })
     );
+  }
+
+  function trapFocus(element) {
+    const focusableEls = element.querySelectorAll(`input, textarea, button`);
+    const firstFocusableEl = focusableEls[0];
+    const lastFocusableEl = focusableEls[focusableEls.length - 1];
+    const KEYCODE_TAB = 9;
+
+    firstFocusableEl.focus();
+
+    document.addEventListener(`keydown`, function (e) {
+      const isTabPressed = e.key === `Tab` || e.keyCode === KEYCODE_TAB;
+
+      if (!isTabPressed) {
+        return;
+      }
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstFocusableEl) {
+          lastFocusableEl.focus();
+          e.preventDefault();
+        }
+      } else {
+        if (document.activeElement === lastFocusableEl) {
+          firstFocusableEl.focus();
+          e.preventDefault();
+        }
+      }
+    });
   }
 })();
 ;
