@@ -63,7 +63,7 @@
 })();
 ;
 (function () {
-  window.addEventListener("hashchange", (e) => e.preventDefault());
+  window.addEventListener(`hashchange`, (e) => e.preventDefault());
 
   document.addEventListener(`click`, (e) => {
     e.preventDefault();
@@ -72,8 +72,39 @@
     if (anchorLink) {
       const id = anchorLink.hash;
       const target = document.querySelector(`${id}`);
-      target.scrollIntoView({ behavior: "smooth", inline: "end" });
+      target.scrollIntoView({ behavior: `smooth`, inline: `end` });
     }
+  });
+})();
+;
+(function () {
+  const inputs = [`name`, `phone`, `question`]
+    .map((inputName) => [...document.querySelectorAll(`[name='${inputName}']`)])
+    .flat();
+
+  const getInputsValue = () => {
+    inputs.forEach((inputEl) => {
+      if (inputEl) {
+        inputEl.value = localStorage.getItem(`${inputEl.name}`);
+        console.log(inputEl.value);
+      }
+    });
+  };
+
+  window.addEventListener(`DOMContentLoaded`, getInputsValue);
+
+  inputs.forEach((input) => {
+    if (!input) return;
+
+    input.addEventListener("input", () => {
+      localStorage.setItem(`${input.name}`, input.value);
+    });
+  });
+
+  inputs.forEach((input) => {
+    if (!input) return;
+
+    input.addEventListener("blur", getInputsValue);
   });
 })();
 ;
