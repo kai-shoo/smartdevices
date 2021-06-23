@@ -810,7 +810,8 @@ a {
   color: #ffffff; }
   @media screen and (-webkit-min-device-pixel-ratio: 1.25), screen and (min-resolution: 120dpi), screen and (min-resolution: 1.25dppx) {
     .form {
-      background-image: url("../img/form-plane@2x.png"), url("../img/hero-background-2.svg"); } }
+      background-image: url("../img/form-plane@2x.png"), url("../img/hero-background-2.svg");
+      background-size: 511px 288px; } }
   @media (max-width: 1544px) {
     .form {
       background-image: none; } }
