@@ -41,7 +41,7 @@
           </span>
           <span class="header__link-text">+7 (495) 000 52 52</span>
         </a>
-        <a class="header__request button" href="#">
+        <a class="header__request button" href="#modal">
           <span>Заказать звонок</span>
         </a>
       </div>
@@ -153,7 +153,7 @@
       </section>
       <section class="page__form form" id="form">
         <div class="form__container container">
-          <form class="form__wrapper" action="post">
+          <form class="form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
             <h2>Остались вопросы? Задайте их нам!</h2>
             <p>Мы проконсультируем Вас бесплатно</p>
             <label class="form__input-wrapper">
@@ -249,6 +249,49 @@
         </div>
       </div>
     </footer>
+
+    <div class="modal modal--cart">
+      <div class="modal__window cart container"></div>
+    </div>
+
+    <div class="modal modal" id="modal">
+      <div class="modal__overlay">
+        <div class="modal__window">
+          <div class="modal__wrapper">
+            <form class="form__wrapper modal__form" action="https://echo.htmlacademy.ru/" method="post">
+              <h2>Закажите звонок</h2>
+              <p>
+                Оставьте контакты, мы проконсультируем вас бесплатно в удобное
+                время
+              </p>
+              <label class="form__input-wrapper">
+                <span class="visually-hidden">Имя</span>
+                <input type="text" name="name" id="name" placeholder="Имя" required="">
+              </label>
+              <label class="form__input-wrapper">
+                <span class="visually-hidden">Телефон</span>
+                <input type="tel" name="phone" id="phone" placeholder="Телефон" required="">
+              </label>
+              <label class="form__input-wrapper form__input-wrapper--textarea">
+                <span class="visually-hidden">Ваш вопрос</span>
+                <textarea name="question" id="question" placeholder="Ваш вопрос" required=""></textarea>
+              </label>
+              <button class="button form__button" type="submit">
+                Задать вопрос
+              </button>
+              <label class="form__input-wrapper form__input-wrapper--checkbox">
+                <input class="visually-hidden" type="checkbox" name="personalData" id="personalData" required="">
+                <span class="form__input-checkbox"></span>
+                <span class="form__label">Я согласен на обработку персональных данных</span>
+              </label>
+            </form>
+            <button class="modal__close" type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/vendors.js"></script>
     <script src="js/main.js"></script>
   </body>

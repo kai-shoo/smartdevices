@@ -3,41 +3,43 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 (function () {
-  const phoneInput = document.querySelector(`input[type="tel"]`);
+  const phoneInputs = document.querySelectorAll(`input[type="tel"]`);
   const form = document.querySelector(`.form__wrapper`);
 
-  if (phoneInput && form) {
-    const phoneMask = IMask(phoneInput, {
-      mask: `+{7}(000)000-00-00`,
-      lazy: true,
-    });
-
-    form.addEventListener(`submit`, (e) => {
-      const formData = new FormData(form);
-
-      fetch(`https://echo.htmlacademy.ru/`, {
-        method: `post`,
-        body: formData,
+  if (phoneInputs && form) {
+    phoneInputs.forEach((phoneInput) => {
+      const phoneMask = IMask(phoneInput, {
+        mask: `+{7}(000)000-00-00`,
+        lazy: true,
       });
-    });
 
-    phoneInput.addEventListener(`focus`, () => {
-      phoneMask.updateOptions({
-        lazy: false,
-      });
-    });
-    phoneInput.addEventListener(
-      `blur`,
-      () => {
-        phoneMask.updateOptions({
-          lazy: true,
+      form.addEventListener(`submit`, (e) => {
+        const formData = new FormData(form);
+
+        fetch(`https://echo.htmlacademy.ru/`, {
+          method: `post`,
+          body: formData,
         });
-        if (!phoneMask.masked.rawInputValue) {
-          phoneMask.value = ``;
-        }
-      },
-      true
-    );
+      });
+
+      phoneInput.addEventListener(`focus`, () => {
+        phoneMask.updateOptions({
+          lazy: false,
+        });
+      });
+      phoneInput.addEventListener(
+        `blur`,
+        () => {
+          phoneMask.updateOptions({
+            lazy: true,
+          });
+          if (!phoneMask.masked.rawInputValue) {
+            phoneMask.value = ``;
+          }
+        },
+        true
+      );
+    });
   }
 })();
 ;
@@ -65,15 +67,14 @@
 (function () {
   window.addEventListener(`hashchange`, (e) => e.preventDefault());
 
-  document.addEventListener(`click`, (e) => {
-    e.preventDefault();
-    const anchorLink = e.target.closest(`a[href^='#']`);
+  document.querySelectorAll(`a[href^='#']`).forEach((link) => {
+    link.addEventListener(`click`, (e) => {
+      e.preventDefault();
 
-    if (anchorLink) {
-      const id = anchorLink.hash;
+      const id = e.target.hash;
       const target = document.querySelector(`${id}`);
       target.scrollIntoView({ behavior: `smooth`, inline: `end` });
-    }
+    });
   });
 })();
 ;
@@ -106,5 +107,48 @@
 
     input.addEventListener("blur", getInputsValue);
   });
+})();
+;
+(function () {
+  const page = document.querySelector(`.page`);
+  const modalButtons = document.querySelectorAll(`a[href='#modal']`);
+  const modalClose = document.querySelector(`.modal__close`);
+  const modal = document.querySelector(`#modal`);
+  const overlay = modal.querySelector(`.modal__overlay`);
+
+  if (page && modalButtons && modalClose && modal && overlay) {
+    const openModal = function () {
+      modal.classList.add(`modal--active`);
+      page.classList.add(`page--block`);
+
+      document.addEventListener(`keydown`, closeModal);
+      modalClose.addEventListener(`click`, closeModal);
+    };
+
+    const closeModal = function (e) {
+      if (e.key && e.key !== `Escape`) {
+        return;
+      }
+
+      page.classList.remove(`page--block`);
+      modal.classList.remove(`modal--active`);
+      document.removeEventListener(`keydown`, closeModal);
+      modalClose.removeEventListener(`click`, closeModal);
+    };
+
+    overlay.addEventListener(`click`, (e) => {
+      if (e.target.classList.contains(`modal__overlay`)) {
+        closeModal(e);
+      }
+    });
+
+    modalButtons.forEach((button) =>
+      button.addEventListener(`click`, (e) => {
+        e.preventDefault();
+
+        openModal();
+      })
+    );
+  }
 })();
 ;
