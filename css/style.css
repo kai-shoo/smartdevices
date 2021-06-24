@@ -86,7 +86,7 @@ a {
           justify-content: center;
   padding: 5px 20px;
   min-height: 55px;
-  font-family: "Roboto Condensed", georgia, serif;
+  font-family: "Roboto Condensed", "Georgia", serif;
   color: inherit;
   font-weight: bold;
   font-size: 14px;
@@ -120,7 +120,7 @@ a {
           flex-direction: column;
   height: 100%;
   margin: 0;
-  font-family: "PT Mono", courier, monospace;
+  font-family: "PT Mono", "Courier", monospace;
   font-size: 16px;
   color: black;
   scroll-behavior: smooth; }
@@ -222,6 +222,9 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden; }
+  @media screen and (-webkit-min-device-pixel-ratio: 1.25), screen and (min-resolution: 120dpi), screen and (min-resolution: 1.25dppx) {
+    .header {
+      background-image: url("../img/hero-background@2x.png"); } }
 
 .header__container {
   display: -webkit-box;
@@ -389,7 +392,7 @@ a {
 
 .hero h1 {
   margin: 0 0 27px 0;
-  font-family: "Roboto Condensed", georgia, serif;
+  font-family: "Roboto Condensed", "Georgia", serif;
   font-weight: bold;
   font-size: 80px;
   line-height: 94px;
@@ -562,7 +565,7 @@ a {
 
 .features h3 {
   margin: 0 0 15px 0;
-  font-family: "Roboto Condensed", georgia, serif;
+  font-family: "Roboto Condensed", "Georgia", serif;
   font-weight: normal;
   font-size: 24px;
   line-height: 34px;
@@ -611,6 +614,9 @@ a {
   background-size: auto 307px;
   background-repeat: no-repeat;
   background-position: -14px 6px; }
+  @media screen and (-webkit-min-device-pixel-ratio: 1.25), screen and (min-resolution: 120dpi), screen and (min-resolution: 1.25dppx) {
+    .about__container {
+      background-image: url("../img/about-year@2x.png"); } }
   @media (max-width: 1023px) {
     .about__container {
       padding: 0 0 0 210px;
@@ -624,7 +630,7 @@ a {
 .about h2 {
   margin: 0 0 20px 0;
   font-weight: normal;
-  font-family: "Roboto Condensed", georgia, serif;
+  font-family: "Roboto Condensed", "Georgia", serif;
   font-size: 36px;
   line-height: 51px; }
   @media (max-width: 1023px) {
@@ -671,7 +677,7 @@ a {
 .services {
   padding-bottom: 127px;
   background-color: #1b2d37;
-  font-family: "Roboto Condensed", georgia, serif;
+  font-family: "Roboto Condensed", "Georgia", serif;
   font-size: 20px;
   line-height: 30px; }
   @media (max-width: 1023px) {
@@ -776,7 +782,7 @@ a {
 
 .services h2 {
   margin: 29px 0 53px 0;
-  font-family: "Roboto Condensed", georgia, serif;
+  font-family: "Roboto Condensed", "Georgia", serif;
   font-size: 36px;
   font-weight: normal;
   line-height: 51px;
@@ -792,7 +798,7 @@ a {
       font-size: 28px; } }
 
 .services p {
-  font-family: "Roboto Condensed", georgia, serif;
+  font-family: "Roboto Condensed", "Georgia", serif;
   font-size: 20px;
   line-height: 30px;
   color: #ffffff;
@@ -977,7 +983,7 @@ a {
   outline: 2px solid #ffffff; }
 
 .form__wrapper h2 {
-  font-family: "Roboto Condensed", georgia, serif;
+  font-family: "Roboto Condensed", "Georgia", serif;
   grid-column-start: span 2;
   margin: 0;
   font-weight: normal;
@@ -1007,6 +1013,13 @@ a {
   @media (max-width: 767px) {
     .form__wrapper p {
       margin-bottom: 26px; } }
+
+.form input[type="checkbox"] {
+  margin-left: 20px;
+  margin-top: 15px; }
+  @media (max-width: 767px) {
+    .form input[type="checkbox"] {
+      margin-left: 10px; } }
 
 .social {
   display: -webkit-box;
@@ -1169,7 +1182,7 @@ a {
 .footer h3 {
   margin-top: 4px;
   margin-bottom: 25px;
-  font-family: "Roboto Condensed", georgia, serif;
+  font-family: "Roboto Condensed", "Georgia", serif;
   font-size: 15px;
   line-height: 16px;
   font-weight: normal;
@@ -1359,7 +1372,9 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  align-center: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0; }
 
 .modal__window {
@@ -1377,7 +1392,6 @@ a {
           justify-content: flex-end;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: no-repeat url("../../img/modal-bg.jpg");
   background-color: #fbf8f8;
   z-index: 1020; }
 
@@ -1404,7 +1418,7 @@ a {
     position: absolute;
     width: 22.5px;
     height: 1px;
-    background: white;
+    background-color: #ffffff;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     -webkit-transform: translateX(-50%);
