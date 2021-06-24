@@ -16,6 +16,11 @@
   background-repeat: no-repeat;
   background-position: -14px 6px;
 
+  @media screen and (min-resolution: 120dpi),
+    screen and (min-resolution: 1.25dppx) {
+    background-image: url("../img/about-year@2x.png");
+  }
+
   @media (max-width: $tablet) {
     padding: 0 0 0 210px;
 

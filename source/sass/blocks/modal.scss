@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-center: center;
+  align-items: center;
   padding: 0;
 }
 
@@ -42,7 +42,6 @@
   justify-content: flex-end;
 
   transform: translate(-50%, -50%);
-  background: no-repeat url("../../img/modal-bg.jpg");
   background-color: #fbf8f8;
 
   z-index: 1020;
@@ -80,7 +79,7 @@
     position: absolute;
     width: 22.5px;
     height: 1px;
-    background: white;
+    background-color: $white;
 
     transition: 0.5s;
     transform: translateX(-50%);

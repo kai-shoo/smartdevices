@@ -7,13 +7,41 @@
     <meta name="description" content="html academy grading" />
     <title>Стартовый шаблон</title>
     <link rel="stylesheet" href="css/style.min.css" />
-    <!-- <link
+    <link
       rel="preload"
-      href="fonts/open-sans-v18-latin_cyrillic-regular.woff2"
+      href="fonts/pt-mono-v8-latin_cyrillic-regular.woff2"
       as="font"
       type="font/woff2"
       crossorigin
-    /> -->
+    />
+    <link
+      rel="preload"
+      href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/roboto-v27-cyrillic-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/roboto-v27-cyrillic-500.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
   </head>
 
   <body class="page page--nojs">
@@ -58,7 +86,7 @@
           </span>
           <span class="header__link-text">+7 (495) 000 52 52</span>
         </a>
-        <a class="header__request button" href="#modal">
+        <a class="header__request button" href="#form">
           <span>Заказать звонок</span>
         </a>
       </div>
@@ -80,13 +108,20 @@
             <a class="hero__scroll" href="#features">Скролл вниз</a>
           </div>
           <div class="hero__image">
-            <img
-              src="img/hero.png"
-              srcset="img/hero@2x.png 2x"
-              alt="фон"
-              width="705"
-              height="515"
-            />
+            <!-- 1x: 2249 2x: 4498  -->
+            <picture>
+              <source
+                srcset="img/hero.webp, img/hero@2x.webp 2x"
+                type="image/webp"
+              />
+              <img
+                src="img/hero.png"
+                srcset="img/hero@2x.png 2x"
+                alt="стопка синих микросхем"
+                width="705"
+                height="515"
+              />
+            </picture>
           </div>
         </div>
       </section>

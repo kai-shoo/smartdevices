@@ -1,6 +1,6 @@
 (function () {
+  const modalButtons = document.querySelectorAll(".header__request");
   const page = document.querySelector(`.page`);
-  const modalButtons = document.querySelectorAll(`a[href='#modal']`);
   const modalClose = document.querySelector(`.modal__close`);
   const modal = document.querySelector(`#modal`);
   const overlay = modal.querySelector(`.modal__overlay`);

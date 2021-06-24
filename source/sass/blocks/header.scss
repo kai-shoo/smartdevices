@@ -5,6 +5,11 @@
   background-size: cover;
 
   overflow: hidden;
+
+  @media screen and (min-resolution: 120dpi),
+    screen and (min-resolution: 1.25dppx) {
+    background-image: url("../img/hero-background@2x.png");
+  }
 }
 
 .header__container {

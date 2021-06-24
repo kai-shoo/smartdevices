@@ -214,3 +214,12 @@
     margin-bottom: 26px;
   }
 }
+
+.form input[type="checkbox"] {
+  margin-left: 20px;
+  margin-top: 15px;
+
+  @media (max-width: $mobile) {
+    margin-left: 10px;
+  }
+}
