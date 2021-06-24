@@ -1,5 +1,5 @@
 (function () {
-  const modalButtons = document.querySelectorAll(".header__request");
+  const modalButtons = document.querySelectorAll(`.header__request`);
   const page = document.querySelector(`.page`);
   const modalClose = document.querySelector(`.modal__close`);
   const modal = document.querySelector(`#modal`);
