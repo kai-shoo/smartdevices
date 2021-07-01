@@ -2,7 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="description" content="html academy grading" />
     <title>Стартовый шаблон</title>
@@ -24,20 +27,6 @@
     <link
       rel="preload"
       href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/roboto-v27-cyrillic-regular.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="fonts/roboto-v27-cyrillic-500.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -128,53 +117,55 @@
     </header>
     <main>
       <section class="page__features features container" id="features">
-        <h2 class="visually-hidden">Преимущества</h2>
-        <div class="features__item">
-          <div class="features__icon">
-            <svg width="29" height="35">
-              <use xlink:href="img/sprite_auto.svg#icon-watch"></use>
-            </svg>
+        <div class="features__wrapper">
+          <h2 class="visually-hidden">Преимущества</h2>
+          <div class="features__item">
+            <div class="features__icon">
+              <svg width="29" height="35">
+                <use xlink:href="img/sprite_auto.svg#icon-watch"></use>
+              </svg>
+            </div>
+            <h3>Оперативные сроки</h3>
+            <p>
+              Усовершенствованная логистическая система позволяет нам
+              просчитывать стоимость, производить и доставлять заказы плат и
+              комплектующих в самые короткие сроки
+            </p>
           </div>
-          <h3>Оперативные сроки</h3>
-          <p>
-            Усовершенствованная логистическая система позволяет нам просчитывать
-            стоимость, производить и доставлять заказы плат и комплектующих в
-            самые короткие сроки
-          </p>
-        </div>
-        <div class="features__item">
-          <div class="features__icon">
-            <svg width="35" height="35">
-              <use xlink:href="img/sprite_auto.svg#icon-hired"></use>
-            </svg>
+          <div class="features__item">
+            <div class="features__icon">
+              <svg width="35" height="35">
+                <use xlink:href="img/sprite_auto.svg#icon-hired"></use>
+              </svg>
+            </div>
+            <h3>Крупные поставщики</h3>
+            <p>
+              Нашими поставщиками являются такие крупные мировые компании как:
+              OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими
+              компаниями обеспичивает хорошее качество нашей продукции.
+            </p>
           </div>
-          <h3>Крупные поставщики</h3>
-          <p>
-            Нашими поставщиками являются такие крупные мировые компании как:
-            OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими
-            компаниями обеспичивает хорошее качество нашей продукции.
-          </p>
-        </div>
-        <div class="features__item">
-          <div class="features__icon">
-            <svg width="36" height="31">
-              <use xlink:href="img/sprite_auto.svg#icon-privacy"></use>
-            </svg>
+          <div class="features__item">
+            <div class="features__icon">
+              <svg width="36" height="31">
+                <use xlink:href="img/sprite_auto.svg#icon-privacy"></use>
+              </svg>
+            </div>
+            <h3>Полная конфиденциальность</h3>
+            <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
           </div>
-          <h3>Полная конфиденциальность</h3>
-          <p>По желанию клиента мы обеспечиваем полную конфеденциальность.</p>
-        </div>
-        <div class="features__item">
-          <div class="features__icon">
-            <svg width="35" height="35">
-              <use xlink:href="img/sprite_auto.svg#icon-tag"></use>
-            </svg>
+          <div class="features__item">
+            <div class="features__icon">
+              <svg width="35" height="35">
+                <use xlink:href="img/sprite_auto.svg#icon-tag"></use>
+              </svg>
+            </div>
+            <h3>Персонализация стоимости</h3>
+            <p>
+              Мы подбираем определенную фабрику, поставщиков, вид доставки,
+              чтобы установить ту цену, которая Вас устраивает.
+            </p>
           </div>
-          <h3>Персонализация стоимости</h3>
-          <p>
-            Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы
-            установить ту цену, которая Вас устраивает.
-          </p>
         </div>
       </section>
       <section class="page__about about">
@@ -183,9 +174,10 @@
           <p>
             Мы поставляем электронные комплектующие, производим печатные платы и
             предоставляем мировые технологии с 1997 года. Выполняем срочные
-            заказы и пилотные образцы до 10 дней. <br /><br /><br
-              class="about__text-mobile-break"
-            />Наши поставщики - мировые производители электронных компонентов:
+            заказы и пилотные образцы до 10 дней.
+          </p>
+          <p>
+            Наши поставщики - мировые производители электронных компонентов:
             OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие
             Service Devices применяются на предприятиях Российских Железных
             Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники.
@@ -251,12 +243,8 @@
                 name="question"
                 id="question"
                 placeholder="Ваш вопрос"
-                required
               ></textarea>
             </label>
-            <button class="button form__button" type="submit">
-              Задать вопрос
-            </button>
             <label class="form__input-wrapper form__input-wrapper--checkbox">
               <input
                 class="visually-hidden"
@@ -270,6 +258,9 @@
                 >Я согласен на обработку персональных данных</span
               >
             </label>
+            <button class="button form__button" type="submit">
+              Задать вопрос
+            </button>
           </form>
         </div>
       </section>
@@ -335,9 +326,15 @@
           <h3 class="ac-header ac-trigger">Наш офис</h3>
           <div class="ac-panel">
             <p>г. Мытищи, Олимпийский проспект, д.10</p>
-            <p>+7 (495) 589-40-50</p>
-            <p>+7 (925) 003-87-67</p>
-            <p>+7 (926) 926-080-79</p>
+            <a class="footer__contacts-tel" href="tel:74955894050">
+              <p>+7 (495) 589-40-50</p>
+            </a>
+            <a class="footer__contacts-tel" href="tel:79250038767">
+              <p>+7 (925) 003-87-67</p>
+            </a>
+            <a class="footer__contacts-tel" href="tel:792692608079">
+              <p>+7 (926) 926-080-79</p>
+            </a>
           </div>
         </div>
         <div class="footer__bottom">
@@ -364,10 +361,10 @@
             >
               <h2>Закажите звонок</h2>
               <p>
-                Оставьте контакты, мы проконсультируем вас бесплатно в удобное
-                время
+                Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в
+                удобное время
               </p>
-              <label class="form__input-wrapper">
+              <label class="form__input-wrapper form__input-wrapper--modal">
                 <span class="visually-hidden">Имя</span>
                 <input
                   type="text"
@@ -377,7 +374,7 @@
                   required
                 />
               </label>
-              <label class="form__input-wrapper">
+              <label class="form__input-wrapper form__input-wrapper--modal">
                 <span class="visually-hidden">Телефон</span>
                 <input
                   type="tel"
@@ -387,19 +384,27 @@
                   required
                 />
               </label>
-              <label class="form__input-wrapper form__input-wrapper--textarea">
+              <label
+                class="
+                  form__input-wrapper
+                  form__input-wrapper--modal
+                  form__input-wrapper--textarea
+                "
+              >
                 <span class="visually-hidden">Ваш вопрос</span>
                 <textarea
                   name="question"
                   id="modal-question"
                   placeholder="Ваш вопрос"
-                  required
                 ></textarea>
               </label>
-              <button class="button form__button" type="submit">
-                Задать вопрос
-              </button>
-              <label class="form__input-wrapper form__input-wrapper--checkbox">
+              <label
+                class="
+                  form__input-wrapper
+                  form__input-wrapper--modal
+                  form__input-wrapper--checkbox
+                "
+              >
                 <input
                   class="visually-hidden"
                   type="checkbox"
@@ -407,11 +412,19 @@
                   id="modal-personalData"
                   required
                 />
-                <span class="form__input-checkbox"></span>
+                <span
+                  class="form__input-checkbox form__input-checkbox--modal"
+                ></span>
                 <span class="form__label"
                   >Я согласен на обработку персональных данных</span
                 >
               </label>
+              <button
+                class="button form__button form__button--modal"
+                type="submit"
+              >
+                Отправить
+              </button>
             </form>
             <button class="modal__close" type="button">
               <span class="visually-hidden">Закрыть</span>

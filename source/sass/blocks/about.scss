@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 0 0 189px;
+  padding: 0 15px 0 189px;
   max-width: 1170px;
 
   background-image: url("../img/about-year.png");
@@ -59,39 +59,49 @@
 }
 
 .about p {
+  &:first-of-type {
+    margin-bottom: 22px;
+  }
   margin: 0 0 37px 0;
   max-width: 984px + 189px;
 
   font-size: 16px;
   line-height: 22px;
 
-  .about__text-mobile-break {
-    display: none;
-  }
-
   @media (max-width: $tablet) {
     margin-left: 3px;
-    padding-right: 25px;
+    padding-right: 15px;
 
-    overflow: hidden;
-    line-clamp: 9;
-    box-orient: vertical;
-    text-overflow: "...";
+    &:first-of-type {
+      margin-bottom: 22px;
+    }
+
+    &:last-of-type {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
   }
 
   @media (max-width: $mobile) {
-    -webkit-line-clamp: 16;
     margin-right: -15px;
     margin-bottom: 25px;
     padding-right: 0;
 
-    .about__text-mobile-break {
-      display: unset;
+    &:first-of-type {
+      margin-bottom: 40px;
+    }
+
+    &:last-of-type {
+      -webkit-line-clamp: 8;
+      margin-bottom: 29px;
     }
   }
 }
 
 .about__button {
+  order: 1;
   min-width: 180px;
   min-height: 45px;
   color: $about-accent;

@@ -9,14 +9,12 @@
     color: #c4c4c4;
     text-align: left;
     width: 100%;
-    padding: 10px 30px 10px 10px;
     display: block;
     cursor: pointer;
     background-color: transparent;
     transition: color 0.25s ease;
     position: relative;
     text-decoration: none;
-    border: 0;
   }
 
   .ac .ac-trigger::after,
@@ -27,7 +25,7 @@
     background-color: #c4c4c4;
     transform: translate(0, -50%);
     position: absolute;
-    right: 10px;
+    right: 17px;
     top: 50%;
   }
 
@@ -43,11 +41,8 @@
     overflow: hidden;
     transition-property: height, visibility;
     transition-timing-function: ease;
-
-    padding-bottom: 12px;
-    margin-top: 12px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 25px;
   }
 
   .ac .ac-panel .ac-text {

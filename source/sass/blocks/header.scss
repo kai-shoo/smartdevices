@@ -138,8 +138,10 @@
 }
 
 .header__request {
+  order: 1;
   min-width: 180px;
   min-height: 45px;
+  margin-left: auto;
 
   @media (max-width: $tablet) {
     display: none;

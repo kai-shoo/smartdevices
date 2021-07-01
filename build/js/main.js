@@ -7,35 +7,27 @@
   const form = document.querySelector(`.form__wrapper`);
 
   if (phoneInputs && form) {
+    form.addEventListener(`submit`, (e) => {
+      const formData = new FormData(form);
+
+      fetch(`https://echo.htmlacademy.ru/`, {
+        method: `post`,
+        body: formData,
+      });
+    });
+
     phoneInputs.forEach((phoneInput) => {
       const phoneMask = IMask(phoneInput, {
         mask: `+{7}(000)000-00-00`,
         lazy: true,
       });
 
-      form.addEventListener(`submit`, (e) => {
-        const formData = new FormData(form);
-
-        fetch(`https://echo.htmlacademy.ru/`, {
-          method: `post`,
-          body: formData,
-        });
-      });
-
-      phoneInput.addEventListener(`focus`, () => {
-        phoneMask.updateOptions({
-          lazy: false,
-        });
-      });
       phoneInput.addEventListener(
           `blur`,
           () => {
             phoneMask.updateOptions({
               lazy: true,
             });
-            if (!phoneMask.masked.rawInputValue) {
-              phoneMask.value = ``;
-            }
           },
           true
       );
@@ -83,9 +75,11 @@
 })();
 ;
 (function () {
+  const MASK = `+7(___)___-__-__`;
+
   const inputs = [`name`, `phone`, `question`]
-      .map((inputName) => [...document.querySelectorAll(`[name='${inputName}']`)])
-      .flat();
+    .map((inputName) => [...document.querySelectorAll(`[name='${inputName}']`)])
+    .flat();
 
   const getInputsValue = () => {
     inputs.forEach((inputEl) => {
@@ -117,7 +111,7 @@
 })();
 ;
 (function () {
-  const modalButtons = document.querySelectorAll(".header__request");
+  const modalButtons = document.querySelectorAll(`.header__request`);
   const page = document.querySelector(`.page`);
   const modalClose = document.querySelector(`.modal__close`);
   const modal = document.querySelector(`#modal`);

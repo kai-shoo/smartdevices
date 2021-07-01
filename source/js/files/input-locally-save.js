@@ -1,7 +1,9 @@
 (function () {
+  const MASK = `+7(___)___-__-__`;
+
   const inputs = [`name`, `phone`, `question`]
-      .map((inputName) => [...document.querySelectorAll(`[name='${inputName}']`)])
-      .flat();
+    .map((inputName) => [...document.querySelectorAll(`[name='${inputName}']`)])
+    .flat();
 
   const getInputsValue = () => {
     inputs.forEach((inputEl) => {

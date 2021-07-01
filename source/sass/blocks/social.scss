@@ -2,13 +2,14 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .social__logo {
-  flex-basis: 100%;
   margin-bottom: 45px;
+  margin-right: 10px;
 
-  @media (max-width: 1380px) {
+  @media (max-width: $tablet) {
     order: 0;
     flex-basis: 40%;
     margin-bottom: 0;
@@ -21,7 +22,10 @@
 }
 
 .social__list {
-  @media (max-width: 1380px) {
+  display: flex;
+  margin-top: 5px;
+
+  @media (max-width: $tablet) {
     flex-basis: 18%;
     order: 2;
     margin-right: -20px;
@@ -31,12 +35,14 @@
     flex-basis: 100%;
     margin-top: 32px;
     margin-right: 0;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 }
 
 .social__item {
-  margin-right: 6px;
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
 
   svg {
     fill: $social-icon;

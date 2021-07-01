@@ -1,21 +1,34 @@
 .features {
   display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(2, minmax(345px, 1fr));
-  grid-auto-rows: minmax(300px, min-content);
-  padding: 112px 0 0 15px;
-  max-width: 1170px + 15px;
+  padding: 112px 15px 0 15px;
+  max-width: 1217px;
+
   width: 100%;
   color: $features-color;
 
   @media (max-width: $tablet) {
-    grid-auto-rows: minmax(230px, min-content);
     padding: 55px 25px 10px 25px;
   }
 
   @media (max-width: $mobile) {
-    grid-template-columns: 1fr;
     padding: 37px 15px;
+  }
+}
+
+.features__wrapper {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, minmax(345px, 1fr));
+  grid-auto-rows: minmax(300px, min-content);
+  margin-left: 15px;
+
+  @media (max-width: $tablet) {
+    grid-auto-rows: minmax(230px, min-content);
+    margin-left: 0;
+  }
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
     row-gap: 20px;
     grid-auto-rows: (minmax(232px, min-content));
   }
