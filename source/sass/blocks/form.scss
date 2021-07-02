@@ -7,6 +7,7 @@
     url("../img/hero-background-2.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: right 75% top 160px, right 86% top -61px;
+  background-size: 511px, 670px;
 
   font-size: 14px;
   line-height: 16px;
@@ -16,11 +17,11 @@
     screen and (min-resolution: 1.25dppx) {
     background-image: url("../img/form-plane@2x.png"),
       url("../img/hero-background-2.svg");
-    background-size: 511px 288px;
   }
 
   @media (max-width: 1544px) {
-    background-position: right 1100px top 160px, right 86% top -61px;
+    background-position: left 10% top 260px, right 86% top 61px;
+    background-size: 22%, calc(200px + 20%);
   }
 
   @media (max-width: $tablet) {
@@ -47,7 +48,7 @@
   margin-left: auto;
   margin-right: 120px;
 
-  @media (max-width: 1544px) {
+  @media (max-width: $tablet) {
     margin-right: auto;
   }
 
